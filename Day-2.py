@@ -59,6 +59,19 @@ final_price = price - (1000*0.15)
 print(final_price)
 
 
+#vijay went to hotel for dinner his bill is 2500,GST applicable is 5%
+#hotel manager has given him 5% discount,how much vijay has to pay ?
+
+bill = 2500
+gst = 0.05
+discount = 0.05
+final_price = price - (price*discount)
+
+final_price = final_price + (final_price * gst)
+print(final_price)
+
+
+
 
 
 
