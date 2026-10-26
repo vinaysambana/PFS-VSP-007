@@ -149,12 +149,14 @@ print(len(data))
 print(data[2])
 print(type(data[1]))
 '''
+
 #Dictionaries are Mutable collections
 details = {'ids':['CGVI0242','CGVI0249','CGVI0224','CGVI0240'],
            'names':['Nikitha','Deepthi','Vinay','Tej'],
-           'batches':'PFS-VSP-007','JFS-VIJWD-008','DA-HYD-009','HR-BNGLR-006',
+           'batches':'PFS-VSP-007','JFS-VIJWD-008','DA-HYD-009','CX-BNGLR-006',
            'place':('Vsp','Vijwda','Hyd','Bnglr'),
            'subjects':{'Python','Aptitude','Softskills','SQL'}}
+'''
 print(details)
 print(len(details))
 print(details.keys())
@@ -167,12 +169,28 @@ print(details['ids'])
 print(details['ids'][:3])#returns First 3 ids
 print(details['ids'][::2])
 '''
-#Task : 1)Insert Raju at the end also Sanju and Nihanth at the end in names
-        2)Update subjects with SQL,Flask,FastAPI
-        3)remove Bnglr and Vizag from place
-        4)Convert batch number to lowercase
-'''
+#Task :# 1)Insert Raju at the end also Sanju and Nihanth at the end in names
+       # 2)Update subjects with SQL,Flask,FastAPI
+       # 3)remove Bnglr and Vizag from place
+       # 4)Convert batch number to lowercase
 
+#1. Insert Raju, Sanju and Nihanth at the end of names
+details['names'].append('Raju')
+details['names'].append('Sanju')
+details['names'].append('Nihanth')
+
+# 2. Update subjects with SQL, Flask and FastAPI
+details['subjects'] = {'SQL', 'Flask', 'FastAPI'}
+
+# 3. Remove Bnglr and Vijwda from place
+details['place'].remove('Bnglr')
+details['place'].remove('Vsp')
+
+# 4. Convert batch numbers to lowercase
+details['batches'] = [batches.lower() for batches in details['batches']]
+
+# Print the updated dictionary
+print(details)
 
 
 
