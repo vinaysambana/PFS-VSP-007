@@ -116,6 +116,57 @@ print(Students['s1'])
 
 Make sure you apply methods also to it(Lists/Sets)
 '''
+'''
+# Create Student Profile
+Student = {
+    'ID': 101,
+    'Email': 'student@gmail.com',
+    'Mobile': '9876543210',
+    'Parent_WhatsApp': '9876501234',
+    'subjects': ['Python', 'Java'],
+    'batch_no': 5,
+    'daily_exam_marks': [20, 20, 25],
+    'weekly_exam_marks': [85, 90, 95],
+    'batch_rank': 1,
+    'githuburl': 'https://github.com/student',
+    'linkedinid': 'student-linkedin'
+}
+
+# Update subjects using list method
+Student['subjects'].append('Aptitude')
+
+# Update daily marks using list method
+Student['daily_exam_marks'].append(30)
+
+# Update weekly marks using list method
+Student['weekly_exam_marks'].append(98)
+
+# Use set methods
+skills = {'Python', 'Java'}
+skills.add('SQL')
+skills.update(['HTML', 'CSS'])
+skills.discard('Java')
+
+# Update student profile
+Student['skills'] = list(skills)
+
+# Display student profile
+print("Student Profile:")
+print(Student)
+
+# Display subjects
+print("Subjects:", Student['subjects'])
+
+# Display total daily marks
+print("Total Daily Marks:", sum(Student['daily_exam_marks']))
+
+# Display total weekly marks
+print("Total Weekly Marks:", sum(Student['weekly_exam_marks']))
+
+# Display number of subjects
+print("Number of Subjects:", len(Student['subjects']))
+'''
+
 #FrozenSets --> Frozensets are Unordered,it also an Immutable
 #collection
 
