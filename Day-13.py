@@ -87,40 +87,87 @@ for key,value in details.items():
 
 for data in details:
     print(details[data])#it returns values
+
+#range(start,stop) ---> u can mention start and stop postion (values)
+#start is included,end is excluded
+for i in range(1,11):
+    print(i,i**2)
+    print('<--->')
+
+#range(start,stop,step)
+for i in range(1,21,1):
+    print(i)
+for i in range(1,21,2):
+    print(i)
+
+#Get First 10 even numbers
+for i in range(2,21,2):
+    print(i)
+
+
+#print numbers from 10 to 1 in reverse order
+for i in range(10,0,-1):
+    print(i)
+
+
+#print 'A' to 'Z' in a single line # [chr(i) always digit,ord('s') always string]
+for i in range(65,91):
+    #print(i,chr(i))
+    print(chr(i),end=' ')
 '''
 
+names = ['Akash','Kaushik','Vijay','Sanjay','Lokesh']
+for name in names:
+    print(name,end= ' ')#this returns in horizontal order
+
+for i in range(len(names)):
+    print(names[i]) # names[0] --->Akash--->names[1]--->Kaushik
+
+#Ask integer input from user and get the sum of the numbers as per input
+'''
+Test-1:
+4
+10
+
+Test-2:
+6
+21
+
+Test-3:
+-5
+No Output
 
 
+n = int(input("Enter a Number:"))
+if n>=0:
+    result = 0 #target
+    for i in range(n+1):
+        #print(i)
+        result = result + i
+    print(f'Result of {i} is {result}')
+else:
+    print("No Output")
+'''
 
+#Use Case : Checking daily workout app usage
+work_log = [1,1,1,0,1,1,0]
+#1 ---> workout done
+#0 ---> workout missing
+#Find the longest workout streak
+work_log = [1, 1, 1, 0, 1, 1, 0]
 
+longest_streak = 0 #target
+current_streak = 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
+for day in work_log:
+    print(day)
+    if day == 1:
+        current_streak = current_streak + 1
+        if current_streak > longest_streak:
+            longest_streak = current_streak
+    else:
+        current_streak = 0
+print(f'Longest work_log streak is {longest_streak}')
 
 
 
